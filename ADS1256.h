@@ -48,7 +48,10 @@
 	// Contributions are welcome
 	#error "Oops! Your board architecture is not supported yet'"
 #endif
-// ADS1256 Register
+/*
+@Bei P.30
+Register Map
+*/
 #define STATUS 0x00
 #define MUX 0x01
 #define ADCON 0x02
@@ -61,7 +64,10 @@
 #define FSC1 0x09
 #define FSC2 0x0A
 
-// ADS1256 Command
+/*
+@Bei P.34
+Command Definitions
+*/
 #define WAKEUP 0x00
 #define RDATA 0x01
 #define RDATAC 0x03
