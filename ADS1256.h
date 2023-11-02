@@ -98,38 +98,38 @@
 #define ADS1256_MUXN_AIN7 0x07
 #define ADS1256_MUXN_AINCOM 0x08
 
-// define gain codes
-#define ADS1256_GAIN_1 0x00
-#define ADS1256_GAIN_2 0x01
-#define ADS1256_GAIN_4 0x02
-#define ADS1256_GAIN_8 0x03
-#define ADS1256_GAIN_16 0x04
-#define ADS1256_GAIN_32 0x05
-#define ADS1256_GAIN_64 0x06
+/* 
+definitions of Programmable Gain Amplifier
+*/
+#define ADS1256_GAIN_1 0x00   ///< +/-5V range = Gain 1
+#define ADS1256_GAIN_2 0x01   ///< +/-2.5V range = Gain 2
+#define ADS1256_GAIN_4 0x02   ///< +/-1.25V range = Gain 4
+#define ADS1256_GAIN_8 0x03   ///< +/-0.625V range = Gain 8
+#define ADS1256_GAIN_16 0x04  ///< +/-312.5mV range = Gain 16
+#define ADS1256_GAIN_32 0x05  ///< +/-156.26mV range = Gain 32
+#define ADS1256_GAIN_64 0x06  ///< +/-78.125mV range = Gain 64
 
-// define drate codes
+// Data Rates 
 /*
-        NOTE : 	Data Rate vary depending on crystal frequency. Data rates
-   listed below assumes the crystal frequency is 7.68Mhz
-                for other frequency consult the datasheet.
+  F_CLKIN= 7.68Mhz, datasheet
 */
 
-#define ADS1256_DRATE_30000SPS 0xF0
-#define ADS1256_DRATE_15000SPS 0xE0
-#define ADS1256_DRATE_7500SPS 0xD0
-#define ADS1256_DRATE_3750SPS 0xC0
-#define ADS1256_DRATE_2000SPS 0xB0
-#define ADS1256_DRATE_1000SPS 0xA1
-#define ADS1256_DRATE_500SPS 0x92
-#define ADS1256_DRATE_100SPS 0x82
-#define ADS1256_DRATE_60SPS 0x72
-#define ADS1256_DRATE_50SPS 0x63
-#define ADS1256_DRATE_30SPS 0x53
-#define ADS1256_DRATE_25SPS 0x43
-#define ADS1256_DRATE_15SPS 0x33
-#define ADS1256_DRATE_10SPS 0x23
-#define ADS1256_DRATE_5SPS 0x13
-#define ADS1256_DRATE_2_5SPS 0x03
+#define RATE_ADS1256_30000SPS 0xF0  /// < 30000 samples per second
+#define RATE_ADS1256_15000SPS 0xE0  /// < 15000 samples per second
+#define RATE_ADS1256_7500SPS 0xD0   /// <  7500 samples per second
+#define RATE_ADS1256_3750SPS 0xC0   /// <  3750 samples per second
+#define RATE_ADS1256_2000SPS 0xB0   /// <  2000 samples per second
+#define RATE_ADS1256_1000SPS 0xA1   /// <  1000 samples per second
+#define RATE_ADS1256_500SPS 0x92    /// <  500 samples per second
+#define RATE_ADS1256_100SPS 0x82    /// <  100 samples per second
+#define RATE_ADS1256_60SPS 0x72     /// <   60 samples per second
+#define RATE_ADS1256_50SPS 0x63     /// <   50 samples per second
+#define RATE_ADS1256_30SPS 0x53     /// <   30 samples per second
+#define RATE_ADS1256_25SPS 0x43     /// <   25 samples per second
+#define RATE_ADS1256_15SPS 0x33     /// <   15 samples per second
+#define RATE_ADS1256_10SPS 0x23     /// <   10 samples per second
+#define RATE_ADS1256_5SPS 0x13      /// <    5 samples per second
+#define RATE_ADS1256_2_5SPS 0x03    /// <    2.5 samples per second
 
 #include "Arduino.h"
 #include "SPI.h"
