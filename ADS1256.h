@@ -1,7 +1,6 @@
 /*
-        ADS1256.h - Arduino Library for communication with Texas Instrument ADS1256 ADC
-        Written by Adien Akhmad, August 2015
-	Modifified  Jan 2019 by Axel Sepulveda for ATMEGA328
+        ADS1256.h 24bit ADC 
+        @v1, 02.Nov. 2023
 */
 
 #ifndef __ADS1256_h__
