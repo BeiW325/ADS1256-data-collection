@@ -99,7 +99,7 @@
 #define ADS1256_MUXN_AINCOM 0x08
 
 /* 
-@Bei
+@Bei P.16
 definitions of Programmable Gain Amplifier
 */
 #define PGA_GAIN_1 0x00   ///< +/-5V range = Gain 1
@@ -107,12 +107,23 @@ definitions of Programmable Gain Amplifier
 #define PGA_GAIN_4 0x02   ///< +/-1.25V range = Gain 4
 #define PGA_GAIN_8 0x03   ///< +/-0.625V range = Gain 8
 #define PGA_GAIN_16 0x04  ///< +/-312.5mV range = Gain 16
-#define PGA_GAIN_32 0x05  ///< +/-156.26mV range = Gain 32
+#define PGA_GAIN_32 0x05  ///< +/-156.25mV range = Gain 32
 #define PGA_GAIN_64 0x06  ///< +/-78.125mV range = Gain 64
+
+/** Gain settings */
+typedef enum {
+  GAIN_ONE = ADS11256_REG_CONFIG_PGA_5V,
+  GAIN_TWO = ADS11256_REG_CONFIG_PGA_2_5V,
+  GAIN_FOUR = ADS11256_REG_CONFIG_PGA_1_25V,
+  GAIN_EIGHT = ADS11256_REG_CONFIG_PGA_0_625V,
+  GAIN_SIXTEEN = ADS11256_REG_CONFIG_PGA_312_5mV,
+  GAIN_THIRTYTWO = ADS11256_REG_CONFIG_PGA_156_25mV,
+  GAIN_SIXTYFOUR = ADS11256_REG_CONFIG_PGA_78_125mV,
+} adsGain_t;
 
 // Data Rates 
 /*
-  @Bei
+  @Bei P.18
   F_CLKIN= 7.68Mhz, datasheet
 */
 
